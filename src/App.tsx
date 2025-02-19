@@ -273,7 +273,7 @@ ${partnershipFormData.message}
                 <a href="#home" className="flex items-center space-x-3 group">
                   <div className="w-12 h-12 rounded-full bg-[#1A1A1A] flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                     <img 
-                      src="/images/sponsors/The-Learn-Up-Logo.png" 
+                      src="/sponsorship/images/sponsors/The-Learn-Up-Logo.png" 
                       alt="The Learn Up Logo" 
                       className="h-10 w-auto rounded-full"
                     />
@@ -323,7 +323,7 @@ ${partnershipFormData.message}
             <div className="container mx-auto px-4 py-4 space-y-4">
               <div className="flex justify-center mb-6">
                 <img 
-                  src="/images/sponsors/The-Learn-Up-Logo.png" 
+                  src="/sponsorship/images/sponsors/The-Learn-Up-Logo.png" 
                   alt="The Learn Up Logo" 
                   className="h-10 w-auto rounded-full"
                 />
@@ -741,56 +741,56 @@ ${partnershipFormData.message}
               {/* Company logos */}
               <div className="bg-[#1A1A1A]/80 p-6 rounded-xl backdrop-blur-md border border-[#2A2A2A] flex items-center justify-center min-h-[100px]">
                 <img 
-                  src="/images/sponsors/Fliki-AI-Logo-removebg.png" 
+                  src="/sponsorship/images/sponsors/Fliki-AI-Logo-removebg.png" 
                   alt="Fliki AI" 
                   className="w-44 h-12 object-contain opacity-70"
                 />
               </div>
               <div className="bg-[#1A1A1A]/80 p-6 rounded-xl backdrop-blur-md border border-[#2A2A2A] flex items-center justify-center min-h-[100px]">
                 <img 
-                  src="/images/sponsors/Vidnoz-Logo.png" 
+                  src="/sponsorship/images/sponsors/Vidnoz-Logo.png" 
                   alt="Vidnoz" 
                   className="w-36 h-10 object-contain opacity-70"
                 />
               </div>
               <div className="bg-[#1A1A1A]/80 p-6 rounded-xl backdrop-blur-md border border-[#2A2A2A] flex items-center justify-center min-h-[100px]">
                 <img 
-                  src="/images/sponsors/HitPaw-Logo.webp" 
+                  src="/sponsorship/images/sponsors/HitPaw-Logo.webp" 
                   alt="HitPaw" 
                   className="w-36 h-10 object-contain opacity-70 brightness-0 invert"
                 />
               </div>
               <div className="bg-[#1A1A1A]/80 p-6 rounded-xl backdrop-blur-md border border-[#2A2A2A] flex items-center justify-center min-h-[100px]">
                 <img 
-                  src="/images/sponsors/Fotor-Logo.webp" 
+                  src="/sponsorship/images/sponsors/Fotor-Logo.webp" 
                   alt="Fotor" 
                   className="w-36 h-10 object-contain opacity-70"
                 />
               </div>
               <div className="bg-[#1A1A1A]/80 p-6 rounded-xl backdrop-blur-md border border-[#2A2A2A] flex items-center justify-center min-h-[100px]">
                 <img 
-                  src="/images/sponsors/Stylar-AI.png" 
+                  src="/sponsorship/images/sponsors/Stylar-AI.png" 
                   alt="Stylar AI" 
                   className="w-36 h-10 object-contain opacity-70"
                 />
               </div>
               <div className="bg-[#1A1A1A]/80 p-6 rounded-xl backdrop-blur-md border border-[#2A2A2A] flex items-center justify-center min-h-[100px]">
                 <img 
-                  src="/images/sponsors/Innaio-logo.png" 
+                  src="/sponsorship/images/sponsors/Innaio-logo.png" 
                   alt="Innaio" 
                   className="w-36 h-10 object-contain opacity-70"
                 />
               </div>
               <div className="bg-[#1A1A1A]/80 p-6 rounded-xl backdrop-blur-md border border-[#2A2A2A] flex items-center justify-center min-h-[100px]">
                 <img 
-                  src="/images/sponsors/Wps-Office.png" 
+                  src="/sponsorship/images/sponsors/Wps-Office.png" 
                   alt="WPS Office" 
                   className="w-36 h-10 object-contain opacity-70"
                 />
               </div>
               <div className="bg-[#1A1A1A]/80 p-6 rounded-xl backdrop-blur-md border border-[#2A2A2A] flex items-center justify-center min-h-[100px]">
                 <img 
-                  src="/images/sponsors/Hocos-logo.png" 
+                  src="/sponsorship/images/sponsors/Hocos-logo.png" 
                   alt="Hocos" 
                   className="w-44 h-12 object-contain opacity-70"
                 />
@@ -846,7 +846,7 @@ ${partnershipFormData.message}
               <div className="flex items-center mb-8 md:mb-0">
                 <a href="#home" className="flex items-center space-x-3 group">
                   <img 
-                    src="/images/sponsors/The-Learn-Up-Logo.png" 
+                    src="/sponsorship/images/sponsors/The-Learn-Up-Logo.png" 
                     alt="The Learn Up Logo" 
                     className="h-10 w-auto rounded-full group-hover:scale-105 transition-transform duration-300"
                   />
