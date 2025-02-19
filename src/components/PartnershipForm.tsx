@@ -131,7 +131,8 @@ const PartnershipForm: React.FC<PartnershipFormProps> = ({
                 options={[
                   { value: "", label: "Select video type", disabled: true },
                   { value: "Short Video", label: "Short Video" },
-                  { value: "Dedicated Video", label: "Dedicated Video" }
+                  { value: "Dedicated Video", label: "Dedicated Video" },
+                  { value: "Premium Video", label: "Premium Video" }
                 ]}
               />
 

@@ -188,7 +188,8 @@ ${partnershipFormData.message}
     const { name, value } = e.target;
     
     if (name === 'videoType') {
-      const pricing = value === 'Dedicated Video' ? '$150 - Dedicated Video' : 
+      const pricing = value === 'Premium Video' ? '$200 - Premium Video' :
+                     value === 'Dedicated Video' ? '$150 - Dedicated Video' : 
                      value === 'Short Video' ? '$50 - Short Video' : '';
       setPartnershipFormData(prev => ({
         ...prev,
@@ -364,7 +365,7 @@ ${partnershipFormData.message}
                 <button 
                   onClick={() => setShowPartnershipForm(true)}
                   className="group px-6 py-3 bg-gradient-to-r from-[#06B6D4] to-[#0891B2] hover:from-[#0891B2] hover:to-[#06B6D4] rounded-full font-extrabold transition-all duration-300 flex items-center text-sm shadow-lg shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/50 hover:scale-105"
-                >
+              >
                 Start Partnership
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -392,7 +393,7 @@ ${partnershipFormData.message}
           <div className="max-w-4xl mx-auto text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">
               Why Choose <span className="text-[#06B6D4]">The Learn Up</span>
-            </h2>
+          </h2>
             <p className="text-lg text-gray-400">
               Partner with a channel that delivers exceptional value and reaches your target audience effectively
             </p>
@@ -436,7 +437,7 @@ ${partnershipFormData.message}
             <div className="max-w-4xl mx-auto text-center mb-20">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">
                 Channel <span className="text-[#06B6D4]">Performance</span>
-              </h2>
+            </h2>
               <p className="text-lg text-gray-400">
                 Track our channel's growth and engagement metrics. We maintain consistent growth and high engagement rates, ensuring your product reaches an active and interested audience.
               </p>
@@ -501,7 +502,7 @@ ${partnershipFormData.message}
               <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-8 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02] hover:bg-[#1A1A1A]">
                 <div className="space-y-4">
                   <div className="flex justify-between items-start">
-                    <div>
+                <div>
                       <h3 className="text-lg font-medium text-gray-400 mb-1">Subscribers</h3>
                       <div className="flex items-baseline gap-2">
                         <p className="text-4xl font-bold text-white">18K</p>
@@ -549,13 +550,13 @@ ${partnershipFormData.message}
                     </div>
                   </div>
                 </div>
-              </div>
-
+                </div>
+                
               {/* Engagement Card */}
               <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-8 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02] hover:bg-[#1A1A1A]">
                 <div className="space-y-4">
                   <div className="flex justify-between items-start">
-                    <div>
+                <div>
                       <h3 className="text-lg font-medium text-gray-400 mb-1">Engagement Rate</h3>
                       <div className="flex items-baseline gap-2">
                         <p className="text-4xl font-bold text-white">91%</p>
@@ -728,7 +729,7 @@ ${partnershipFormData.message}
                         <div className="w-10 h-10 rounded-lg bg-[#2A1B47] flex items-center justify-center group-hover/video:bg-[#06B6D4]/20 transition-colors duration-300">
                           <PlayCircle className="w-6 h-6 text-[#06B6D4] group-hover/video:scale-110 transition-transform duration-300" />
                         </div>
-                        <div>
+                <div>
                           <p className="text-white font-medium group-hover/video:text-[#06B6D4] transition-colors">Create 3D Animation Video Using Free AI Tool</p>
                           <div className="flex items-center gap-2">
                             <p className="text-sm text-gray-400">8K views</p>
@@ -803,9 +804,53 @@ ${partnershipFormData.message}
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white tracking-tight">
               Promotion <span className="text-[#06B6D4]">Pricing</span>
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {/* Short Video Card */}
+              <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-8 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
+                <div className="absolute -top-3 right-3">
+                  <span className="px-3 py-1 bg-gradient-to-r from-[#06B6D4] to-[#0891B2] rounded-full text-xs font-bold text-white shadow-lg shadow-[#06B6D4]/20">SHORT</span>
+                </div>
+                <div className="relative space-y-4">
+                  <div className="w-12 h-12 rounded-xl overflow-hidden bg-[#2A1B47] group-hover:bg-[#06B6D4]/20 transition-colors duration-300 mb-4">
+                    <Youtube className="w-7 h-7 text-[#06B6D4] m-2.5 group-hover:scale-110 transition-transform duration-300" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white">Short Video For <span className="text-[#06B6D4]">YouTube</span></h3>
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-4xl font-extrabold text-white group-hover:text-[#06B6D4] transition-colors duration-300">$50</span>
+                  </div>
+                  <p className="text-gray-400">60-second engaging short-form video promotion</p>
+                  <ul className="space-y-3 text-gray-400">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-5 h-5 text-[#06B6D4]" />
+                      <span>Quick product highlight</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-5 h-5 text-[#06B6D4]" />
+                      <span>Key features spotlight</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-5 h-5 text-[#06B6D4]" />
+                      <span>Call-to-action focus</span>
+                    </li>
+                  </ul>
+                  <a 
+                    href="#contact"
+                    className="mt-6 block text-center px-6 py-3 bg-[#06B6D4] rounded-xl font-extrabold hover:bg-[#0891B2] transition-all duration-300 text-white shadow-lg shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/50 hover:scale-105"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handlePricingClick('$50 - Short Video', 'Short Video');
+                    }}
+                  >
+                    Get Started
+                  </a>
+                </div>
+              </div>
+
               {/* Dedicated Video Card */}
               <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-8 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
+                <div className="absolute -top-3 right-3">
+                  <span className="px-3 py-1 bg-gradient-to-r from-[#06B6D4] to-[#0891B2] rounded-full text-xs font-bold text-white shadow-lg shadow-[#06B6D4]/20">DEDICATED</span>
+                </div>
                 <div className="relative space-y-4">
                   <div className="w-12 h-12 rounded-xl overflow-hidden bg-[#2A1B47] group-hover:bg-[#06B6D4]/20 transition-colors duration-300 mb-4">
                     <PlayCircle className="w-7 h-7 text-[#06B6D4] m-2.5 group-hover:scale-110 transition-transform duration-300" />
@@ -842,29 +887,36 @@ ${partnershipFormData.message}
                 </div>
               </div>
 
-              {/* Short Video Card */}
+              {/* Premium Video Card */}
               <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-8 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
+                <div className="absolute -top-3 right-3">
+                  <span className="px-3 py-1 bg-gradient-to-r from-[#06B6D4] to-[#0891B2] rounded-full text-xs font-bold text-white shadow-lg shadow-[#06B6D4]/20">PREMIUM</span>
+                </div>
                 <div className="relative space-y-4">
                   <div className="w-12 h-12 rounded-xl overflow-hidden bg-[#2A1B47] group-hover:bg-[#06B6D4]/20 transition-colors duration-300 mb-4">
-                    <Youtube className="w-7 h-7 text-[#06B6D4] m-2.5 group-hover:scale-110 transition-transform duration-300" />
+                    <PlayCircle className="w-7 h-7 text-[#06B6D4] m-2.5 group-hover:scale-110 transition-transform duration-300" />
                   </div>
-                  <h3 className="text-xl font-bold text-white">Short Video For <span className="text-[#06B6D4]">YouTube</span></h3>
+                  <h3 className="text-xl font-bold text-white">Premium Video For <span className="text-[#06B6D4]">YouTube</span></h3>
                   <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-extrabold text-white group-hover:text-[#06B6D4] transition-colors duration-300">$50</span>
+                    <span className="text-4xl font-extrabold text-white group-hover:text-[#06B6D4] transition-colors duration-300">$200</span>
                   </div>
-                  <p className="text-gray-400">60-second engaging short-form video promotion</p>
+                  <p className="text-gray-400">10+ minute comprehensive video promotion with advanced features</p>
                   <ul className="space-y-3 text-gray-400">
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-5 h-5 text-[#06B6D4]" />
-                      <span>Quick product highlight</span>
+                      <span>Extended product showcase</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-5 h-5 text-[#06B6D4]" />
-                      <span>Key features spotlight</span>
+                      <span>In-depth feature analysis</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-5 h-5 text-[#06B6D4]" />
-                      <span>Call-to-action focus</span>
+                      <span>Advanced use cases</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-5 h-5 text-[#06B6D4]" />
+                      <span>Premium production quality</span>
                     </li>
                   </ul>
                   <a 
@@ -872,16 +924,16 @@ ${partnershipFormData.message}
                     className="mt-6 block text-center px-6 py-3 bg-[#06B6D4] rounded-xl font-extrabold hover:bg-[#0891B2] transition-all duration-300 text-white shadow-lg shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/50 hover:scale-105"
                     onClick={(e) => {
                       e.preventDefault();
-                      handlePricingClick('$50 - Short Video', 'Short Video');
+                      handlePricingClick('$200 - Premium Video', 'Premium Video');
                     }}
                   >
                     Get Started
                   </a>
                 </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
         {/* Testimonials Section */}
         <section className="py-24 relative overflow-hidden">
@@ -897,35 +949,35 @@ ${partnershipFormData.message}
               <p className="text-lg text-gray-400">
                 Hear from companies that have partnered with us
               </p>
-            </div>
+                </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1400px] mx-auto">
               <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-8 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
                 <div className="flex items-center gap-4 mb-6">
                   <img src="/sponsorship/images/sponsors/Fliki-AI-Logo-removebg.png" alt="Fliki AI" className="w-12 h-12 rounded-full bg-white/10 p-2" />
-                  <div>
+                <div>
                     <h3 className="text-white font-bold">Fliki AI</h3>
                     <p className="text-gray-400 text-sm">AI Video Platform</p>
                   </div>
                 </div>
                 <p className="text-gray-400">"The Learn Up's promotion significantly boosted our user signups. Their audience engagement is exceptional, and the video quality is top-notch."</p>
-              </div>
+                </div>
 
               <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-8 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
                 <div className="flex items-center gap-4 mb-6">
                   <img src="/sponsorship/images/sponsors/Vidnoz-Logo.png" alt="Vidnoz" className="w-12 h-12 rounded-full bg-white/10 p-2" />
-                  <div>
+                <div>
                     <h3 className="text-white font-bold">Vidnoz</h3>
                     <p className="text-gray-400 text-sm">Video Creation Platform</p>
                   </div>
                 </div>
                 <p className="text-gray-400">"Working with The Learn Up was seamless. Their detailed product showcase and clear communication led to excellent results for our platform."</p>
-              </div>
+                </div>
 
               <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-8 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
                 <div className="flex items-center gap-4 mb-6">
                   <img src="/sponsorship/images/sponsors/HitPaw-Logo.webp" alt="HitPaw" className="w-12 h-12 rounded-full bg-white/10 p-2 brightness-0 invert" />
-                  <div>
+                <div>
                     <h3 className="text-white font-bold">HitPaw</h3>
                     <p className="text-gray-400 text-sm">Video Editing Software</p>
                   </div>
