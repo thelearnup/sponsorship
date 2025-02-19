@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add these CSS variables and animations */
+:root {
+  --glow-color: #4f46e5; /* Tailwind indigo-600 */
+  --glow-speed: 2s;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px -3px rgba(79, 70, 229, 0.8),
+      0 0 30px -2px rgba(79, 70, 229, 0.6);
+  }
+  50% {
+    box-shadow: 
+      0 0 30px 5px rgba(79, 70, 229, 0.9),
+      0 0 40px 10px rgba(79, 70, 229, 0.5);
+  }
+}
+
+.glow-button {
+  animation: glow-pulse var(--glow-speed) ease-in-out infinite;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  will-change: filter;
+}
+
+.glow-button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0.5rem;
+  z-index: -1;
+  background: radial-gradient(circle at 50% 50%, 
+    rgba(79, 70, 229, 0.3), 
+    transparent 70%);
+  opacity: 0.7;
+}
+
+.glow-button:hover {
+  animation: glow-pulse calc(var(--glow-speed) * 0.75) ease-in-out infinite;
+  filter: brightness(1.1);
+}
+
+.glow-section {
+  animation: glow-pulse var(--glow-speed) ease-in-out infinite;
+  position: relative;
+}
+
+.glow-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, 
+    rgba(79, 70, 229, 0.15), 
+    transparent 50%);
+  pointer-events: none;
+}
+
+.hero-glow {
+  box-shadow: 0 0 40px -5px rgba(79, 70, 229, 0.4);
+  transition: box-shadow 0.3s ease;
+}
+
+.hero-glow:hover {
+  box-shadow: 0 0 50px -2px rgba(79, 70, 229, 0.6);
+}
