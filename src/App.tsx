@@ -855,11 +855,11 @@ ${partnershipFormData.message}
               </div>
               <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-12">
                 <a 
-                  href="mailto:contact@thelearnup.com" 
+                  href="mailto:thelearnuponline@gmail.com" 
                   className="flex items-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-105 group"
                 >
                   <Mail className="w-5 h-5 mr-2 group-hover:text-[#06B6D4] transition-colors" />
-                  <span>contact@thelearnup.com</span>
+                  <span>thelearnuponline@gmail.com</span>
                 </a>
                 <a 
                   href="https://www.youtube.com/@theLearnUp" 
