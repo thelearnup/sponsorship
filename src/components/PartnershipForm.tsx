@@ -120,21 +120,6 @@ const PartnershipForm: React.FC<PartnershipFormProps> = ({
                 required
               />
 
-              {/* Pricing Set Field */}
-              <FormSelect
-                label="Pricing Set"
-                id="partnership-pricingSet"
-                name="pricingSet"
-                value={partnershipFormData.pricingSet}
-                onChange={handlePartnershipChange}
-                required
-                options={[
-                  { value: "", label: "Select pricing package", disabled: true },
-                  { value: "$150 - Dedicated Video", label: "$150 - Dedicated Video" },
-                  { value: "$50 - Short Video", label: "$50 - Short Video" }
-                ]}
-              />
-
               {/* Video Type Field */}
               <FormSelect
                 label="Video Type"
@@ -149,6 +134,24 @@ const PartnershipForm: React.FC<PartnershipFormProps> = ({
                   { value: "Dedicated Video", label: "Dedicated Video" }
                 ]}
               />
+
+              {/* Pricing Set Field - Read Only */}
+              <div className="relative group">
+                <label className="block text-sm font-medium mb-2 text-gray-300">
+                  Pricing <span className="text-[#06B6D4]">*</span>
+                </label>
+                <div className="relative">
+                  <input
+                    type="text"
+                    value={partnershipFormData.pricingSet}
+                    readOnly
+                    className="w-full px-5 py-4 rounded-xl bg-black/40 border-2 border-[#2A2A2A] text-white cursor-not-allowed opacity-80"
+                  />
+                  <div className="absolute right-4 top-1/2 -translate-y-1/2">
+                    <div className="text-sm text-gray-400">Auto-set based on video type</div>
+                  </div>
+                </div>
+              </div>
 
               {/* Message Field */}
               <div className="relative group">

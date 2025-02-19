@@ -195,15 +195,7 @@ ${partnershipFormData.message}
         [name]: value,
         pricingSet: pricing
       }));
-    } else if (name === 'pricingSet') {
-      const videoType = value === '$150 - Dedicated Video' ? 'Dedicated Video' : 
-                       value === '$50 - Short Video' ? 'Short Video' : '';
-      setPartnershipFormData(prev => ({
-        ...prev,
-        [name]: value,
-        videoType: videoType
-      }));
-    } else {
+    } else if (name !== 'pricingSet') { // Ignore pricing set changes
       setPartnershipFormData(prev => ({
         ...prev,
         [name]: value
@@ -280,7 +272,7 @@ ${partnershipFormData.message}
                   </div>
                   <span className="text-white text-xl font-bold">The Learn Up</span>
                 </a>
-              </div>
+            </div>
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
@@ -390,107 +382,231 @@ ${partnershipFormData.message}
         </div>
       </section>
 
+      {/* Why Choose Us Section */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#06B6D4]/10 via-[#000000]/5 to-transparent blur-3xl"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#000000] via-transparent to-[#000000]"></div>
+        </div>
+        <div className="container mx-auto px-8 md:px-12 relative z-10">
+          <div className="max-w-4xl mx-auto text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">
+              Why Choose <span className="text-[#06B6D4]">The Learn Up</span>
+            </h2>
+            <p className="text-lg text-gray-400">
+              Partner with a channel that delivers exceptional value and reaches your target audience effectively
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1400px] mx-auto">
+            <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-8 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
+              <div className="w-12 h-12 rounded-xl bg-[#2A1B47] flex items-center justify-center group-hover:bg-[#06B6D4]/20 transition-colors duration-300 mb-6">
+                <Users className="w-6 h-6 text-[#06B6D4] group-hover:scale-110 transition-transform" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Targeted Tech Audience</h3>
+              <p className="text-gray-400">Reach tech enthusiasts, developers, and business professionals who are actively seeking innovative solutions.</p>
+            </div>
+
+            <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-8 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
+              <div className="w-12 h-12 rounded-xl bg-[#2A1B47] flex items-center justify-center group-hover:bg-[#06B6D4]/20 transition-colors duration-300 mb-6">
+                <PlayCircle className="w-6 h-6 text-[#06B6D4] group-hover:scale-110 transition-transform" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">High-Quality Content</h3>
+              <p className="text-gray-400">Professional video production with engaging demonstrations and clear explanations that showcase your product effectively.</p>
+            </div>
+
+            <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-8 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
+              <div className="w-12 h-12 rounded-xl bg-[#2A1B47] flex items-center justify-center group-hover:bg-[#06B6D4]/20 transition-colors duration-300 mb-6">
+                <TrendingUp className="w-6 h-6 text-[#06B6D4] group-hover:scale-110 transition-transform" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Long-Term Value</h3>
+              <p className="text-gray-400">Videos remain accessible indefinitely, providing continuous exposure and organic traffic to your product.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Channel Performance */}
       <section id="performance" className="py-24 relative overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#06B6D4]/10 via-[#000000]/5 to-transparent blur-3xl"></div>
             <div className="absolute inset-0 bg-gradient-to-b from-[#000000] via-transparent to-[#000000]"></div>
           </div>
-        <div className="container mx-auto px-4 relative z-10">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white tracking-tight">
-              Channel <span className="text-[#06B6D4]">Performance</span>
-          </h2>
+        <div className="container mx-auto px-8 md:px-12 relative z-10">
+            <div className="max-w-4xl mx-auto text-center mb-20">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">
+                Channel <span className="text-[#06B6D4]">Performance</span>
+              </h2>
+              <p className="text-lg text-gray-400">
+                Track our channel's growth and engagement metrics. We maintain consistent growth and high engagement rates, ensuring your product reaches an active and interested audience.
+              </p>
+            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16 max-w-[1400px] mx-auto">
               {/* Monthly Views Card */}
-              <div className="bg-[#1A1A1A]/90 p-6 rounded-2xl backdrop-blur-md border border-[#2A2A2A]">
-                <div className="space-y-2">
+              <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-8 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02] hover:bg-[#1A1A1A]">
+                <div className="space-y-4">
                   <div className="flex justify-between items-start">
-                    <h3 className="text-lg font-medium text-white">Monthly Views</h3>
-                    <div className="w-8 h-8 rounded-full bg-[#2A1B47] flex items-center justify-center">
-                      <TrendingUp className="w-5 h-5 text-[#06B6D4]" />
+                    <div>
+                      <h3 className="text-lg font-medium text-gray-400 mb-1">Monthly Views</h3>
+                      <div className="flex items-baseline gap-2">
+                        <p className="text-4xl font-bold text-white">100K</p>
+                        <span className="text-green-500 font-medium text-sm">↑ 25%</span>
+                      </div>
+                      <p className="text-sm text-gray-500 mt-1">vs last month</p>
+                    </div>
+                    <div className="w-12 h-12 rounded-xl bg-[#2A1B47] flex items-center justify-center group-hover:bg-[#06B6D4]/20 transition-colors duration-300">
+                      <TrendingUp className="w-6 h-6 text-[#06B6D4] group-hover:scale-110 transition-transform" />
                     </div>
                   </div>
-                  <div className="flex items-baseline gap-2">
-                    <p className="text-4xl font-bold text-white">100K</p>
-                    <span className="text-green-500 font-medium">↑ 25%</span>
+                  
+                  {/* Growth Chart */}
+                  <div className="h-[60px] w-full">
+                    <svg className="w-full h-full" viewBox="0 0 200 60">
+                      <defs>
+                        <linearGradient id="gradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" style={{ stopColor: '#06B6D4', stopOpacity: 0.2 }} />
+                          <stop offset="100%" style={{ stopColor: '#06B6D4', stopOpacity: 0 }} />
+                        </linearGradient>
+                      </defs>
+                      <path
+                        d="M0 45 C20 48, 40 35, 60 40 C80 45, 100 25, 120 30 C140 35, 160 20, 200 15"
+                        fill="none"
+                        stroke="#06B6D4"
+                        strokeWidth="2.5"
+                        className="drop-shadow-[0_0_6px_rgba(6,182,212,0.6)]"
+                      />
+                      <path
+                        d="M0 45 C20 48, 40 35, 60 40 C80 45, 100 25, 120 30 C140 35, 160 20, 200 15 L 200 60 L 0 60 Z"
+                        fill="url(#gradient1)"
+                        strokeWidth="0"
+                      />
+                    </svg>
                   </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <span className="text-gray-400">vs last month</span>
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-[#2A2A2A]">
-                    <div className="flex justify-between text-sm mb-2">
-                      <span className="text-gray-400">Average Watch Time</span>
-                      <span className="text-white">8:45</span>
+                  
+                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-[#2A2A2A]">
+                    <div>
+                      <p className="text-sm text-gray-400 mb-1">Average Watch Time</p>
+                      <p className="text-lg font-semibold text-white">8:45</p>
                     </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-gray-400">Click-Through Rate</span>
-                      <span className="text-white">12.5%</span>
+                    <div>
+                      <p className="text-sm text-gray-400 mb-1">Click-Through Rate</p>
+                      <p className="text-lg font-semibold text-white">12.5%</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Subscribers Card */}
-              <div className="bg-[#1A1A1A]/90 p-6 rounded-2xl backdrop-blur-md border border-[#2A2A2A]">
-                <div className="space-y-2">
+              <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-8 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02] hover:bg-[#1A1A1A]">
+                <div className="space-y-4">
                   <div className="flex justify-between items-start">
-                    <h3 className="text-lg font-medium text-white">Subscribers</h3>
-                    <div className="w-8 h-8 rounded-full bg-[#2A1B47] flex items-center justify-center">
-                      <Users className="w-5 h-5 text-[#22C55E]" />
+                    <div>
+                      <h3 className="text-lg font-medium text-gray-400 mb-1">Subscribers</h3>
+                      <div className="flex items-baseline gap-2">
+                        <p className="text-4xl font-bold text-white">18K</p>
+                        <span className="text-green-500 font-medium text-sm">↑ 15%</span>
+                      </div>
+                      <p className="text-sm text-gray-500 mt-1">vs last month</p>
+                    </div>
+                    <div className="w-12 h-12 rounded-xl bg-[#2A1B47] flex items-center justify-center group-hover:bg-[#22C55E]/20 transition-colors duration-300">
+                      <Users className="w-6 h-6 text-[#22C55E] group-hover:scale-110 transition-transform" />
                     </div>
                   </div>
-                  <div className="flex items-baseline gap-2">
-                    <p className="text-4xl font-bold text-white">18K</p>
-                    <span className="text-green-500 font-medium">↑ 15%</span>
+                  
+                  {/* Growth Chart */}
+                  <div className="h-[60px] w-full">
+                    <svg className="w-full h-full" viewBox="0 0 200 60">
+                      <defs>
+                        <linearGradient id="gradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" style={{ stopColor: '#22C55E', stopOpacity: 0.2 }} />
+                          <stop offset="100%" style={{ stopColor: '#22C55E', stopOpacity: 0 }} />
+                        </linearGradient>
+                      </defs>
+                      <path
+                        d="M0 45 C40 42, 80 38, 120 32 C160 26, 180 22, 200 18"
+                        fill="none"
+                        stroke="#22C55E"
+                        strokeWidth="2.5"
+                        className="drop-shadow-[0_0_6px_rgba(34,197,94,0.6)]"
+                      />
+                      <path
+                        d="M0 45 C40 42, 80 38, 120 32 C160 26, 180 22, 200 18 L 200 60 L 0 60 Z"
+                        fill="url(#gradient2)"
+                        strokeWidth="0"
+                      />
+                    </svg>
                   </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <span className="text-gray-400">vs last month</span>
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-[#2A2A2A]">
-                    <div className="flex justify-between text-sm mb-2">
-                      <span className="text-gray-400">Daily New Subscribers</span>
-                      <span className="text-[#22C55E]">+250</span>
+                  
+                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-[#2A2A2A]">
+                    <div>
+                      <p className="text-sm text-gray-400 mb-1">Daily New Subscribers</p>
+                      <p className="text-lg font-semibold text-[#22C55E]">+250</p>
                     </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-gray-400">Subscriber Retention</span>
-                      <span className="text-white">98.5%</span>
+                    <div>
+                      <p className="text-sm text-gray-400 mb-1">Subscriber Retention</p>
+                      <p className="text-lg font-semibold text-white">98.5%</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Engagement Card */}
-              <div className="bg-[#1A1A1A]/90 p-6 rounded-2xl backdrop-blur-md border border-[#2A2A2A]">
-                <div className="space-y-2">
+              <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-8 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02] hover:bg-[#1A1A1A]">
+                <div className="space-y-4">
                   <div className="flex justify-between items-start">
-                    <h3 className="text-lg font-medium text-white">Engagement Rate</h3>
-                    <div className="w-8 h-8 rounded-full bg-[#2A1B47] flex items-center justify-center">
-                      <PlayCircle className="w-5 h-5 text-[#06B6D4]" />
+                    <div>
+                      <h3 className="text-lg font-medium text-gray-400 mb-1">Engagement Rate</h3>
+                      <div className="flex items-baseline gap-2">
+                        <p className="text-4xl font-bold text-white">91%</p>
+                        <span className="text-green-500 font-medium text-sm">↑ 5%</span>
+                      </div>
+                      <p className="text-sm text-gray-500 mt-1">vs last month</p>
+                    </div>
+                    <div className="w-12 h-12 rounded-xl bg-[#2A1B47] flex items-center justify-center group-hover:bg-[#06B6D4]/20 transition-colors duration-300">
+                      <PlayCircle className="w-6 h-6 text-[#06B6D4] group-hover:scale-110 transition-transform" />
                     </div>
                   </div>
-                  <div className="flex items-baseline gap-2">
-                    <p className="text-4xl font-bold text-white">91%</p>
-                    <span className="text-green-500 font-medium">↑ 5%</span>
+                  
+                  {/* Growth Chart */}
+                  <div className="h-[60px] w-full">
+                    <svg className="w-full h-full" viewBox="0 0 200 60">
+                      <defs>
+                        <linearGradient id="gradient3" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" style={{ stopColor: '#06B6D4', stopOpacity: 0.2 }} />
+                          <stop offset="100%" style={{ stopColor: '#06B6D4', stopOpacity: 0 }} />
+                        </linearGradient>
+                      </defs>
+                      <path
+                        d="M0 40 C30 38, 60 35, 90 32 C120 29, 150 26, 200 20"
+                        fill="none"
+                        stroke="#06B6D4"
+                        strokeWidth="2.5"
+                        className="drop-shadow-[0_0_6px_rgba(6,182,212,0.6)]"
+                      />
+                      <path
+                        d="M0 40 C30 38, 60 35, 90 32 C120 29, 150 26, 200 20 L 200 60 L 0 60 Z"
+                        fill="url(#gradient3)"
+                        strokeWidth="0"
+                      />
+                    </svg>
                   </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <span className="text-gray-400">vs last month</span>
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-[#2A2A2A]">
-                    <div className="flex justify-between text-sm mb-2">
-                      <span className="text-gray-400">Average Likes</span>
-                      <div className="flex items-center gap-2">
-                        <span className="text-[#06B6D4] font-medium">15K</span>
-                        <span className="text-gray-400">per video</span>
+                  
+                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-[#2A2A2A]">
+                    <div>
+                      <p className="text-sm text-gray-400 mb-1">Average Likes</p>
+                      <div className="flex items-baseline gap-1">
+                        <p className="text-lg font-semibold text-[#06B6D4]">15K</p>
+                        <span className="text-sm text-gray-500">per video</span>
                       </div>
                     </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-gray-400">Comment Rate</span>
+                    <div>
+                      <p className="text-sm text-gray-400 mb-1">Comment Rate</p>
                       <div className="flex items-center gap-2">
-                        <div className="h-1.5 w-24 bg-black/40 rounded-full overflow-hidden">
+                        <div className="h-2 w-full bg-black/40 rounded-full overflow-hidden">
                           <div className="h-full w-[8.5%] bg-[#06B6D4] rounded-full"></div>
                         </div>
-                        <span className="text-white">8.5%</span>
+                        <span className="text-lg font-semibold text-white min-w-[45px]">8.5%</span>
                       </div>
                     </div>
                   </div>
@@ -499,9 +615,9 @@ ${partnershipFormData.message}
             </div>
 
             {/* Additional Performance Metrics */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-[1400px] mx-auto">
               {/* Audience Demographics */}
-              <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-6 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
+              <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-8 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
                 <h3 className="text-xl font-bold text-white mb-6">Audience Demographics</h3>
                 <div className="space-y-4">
                   <div>
@@ -544,7 +660,7 @@ ${partnershipFormData.message}
               </div>
 
               {/* Content Performance */}
-              <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-6 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
+              <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-8 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
                 <h3 className="text-xl font-bold text-white mb-6">Content Performance</h3>
                 <div className="space-y-4">
                   <a 
@@ -628,6 +744,50 @@ ${partnershipFormData.message}
                     </div>
                   </a>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Process Section */}
+        <section className="py-24 relative overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#06B6D4]/10 via-[#000000]/5 to-transparent blur-3xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-[#000000] via-transparent to-[#000000]"></div>
+          </div>
+          <div className="container mx-auto px-8 md:px-12 relative z-10">
+            <div className="max-w-4xl mx-auto text-center mb-20">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">
+                How the <span className="text-[#06B6D4]">Process Works</span>
+              </h2>
+              <p className="text-lg text-gray-400">
+                Simple, transparent, and effective partnership process from start to finish
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-[1400px] mx-auto">
+              <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-8 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
+                <div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-[#06B6D4] flex items-center justify-center font-bold text-xl shadow-lg shadow-[#06B6D4]/20">1</div>
+                <h3 className="text-xl font-bold text-white mb-4 mt-2">Submit Request</h3>
+                <p className="text-gray-400">Fill out our partnership form with your product details and preferences.</p>
+              </div>
+
+              <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-8 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
+                <div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-[#06B6D4] flex items-center justify-center font-bold text-xl shadow-lg shadow-[#06B6D4]/20">2</div>
+                <h3 className="text-xl font-bold text-white mb-4 mt-2">Review & Plan</h3>
+                <p className="text-gray-400">We'll review your product and develop a tailored content strategy.</p>
+              </div>
+
+              <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-8 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
+                <div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-[#06B6D4] flex items-center justify-center font-bold text-xl shadow-lg shadow-[#06B6D4]/20">3</div>
+                <h3 className="text-xl font-bold text-white mb-4 mt-2">Create Content</h3>
+                <p className="text-gray-400">We produce high-quality video content showcasing your product's features.</p>
+              </div>
+
+              <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-8 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
+                <div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-[#06B6D4] flex items-center justify-center font-bold text-xl shadow-lg shadow-[#06B6D4]/20">4</div>
+                <h3 className="text-xl font-bold text-white mb-4 mt-2">Publish & Promote</h3>
+                <p className="text-gray-400">Your content goes live, reaching our engaged audience of tech enthusiasts.</p>
               </div>
             </div>
           </div>
@@ -718,6 +878,59 @@ ${partnershipFormData.message}
                     Get Started
                   </a>
                 </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        {/* Testimonials Section */}
+        <section className="py-24 relative overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#06B6D4]/10 via-[#000000]/5 to-transparent blur-3xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-[#000000] via-transparent to-[#000000]"></div>
+          </div>
+          <div className="container mx-auto px-8 md:px-12 relative z-10">
+            <div className="max-w-4xl mx-auto text-center mb-20">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">
+                What Our <span className="text-[#06B6D4]">Partners Say</span>
+              </h2>
+              <p className="text-lg text-gray-400">
+                Hear from companies that have partnered with us
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1400px] mx-auto">
+              <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-8 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
+                <div className="flex items-center gap-4 mb-6">
+                  <img src="/sponsorship/images/sponsors/Fliki-AI-Logo-removebg.png" alt="Fliki AI" className="w-12 h-12 rounded-full bg-white/10 p-2" />
+                  <div>
+                    <h3 className="text-white font-bold">Fliki AI</h3>
+                    <p className="text-gray-400 text-sm">AI Video Platform</p>
+                  </div>
+                </div>
+                <p className="text-gray-400">"The Learn Up's promotion significantly boosted our user signups. Their audience engagement is exceptional, and the video quality is top-notch."</p>
+              </div>
+
+              <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-8 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
+                <div className="flex items-center gap-4 mb-6">
+                  <img src="/sponsorship/images/sponsors/Vidnoz-Logo.png" alt="Vidnoz" className="w-12 h-12 rounded-full bg-white/10 p-2" />
+                  <div>
+                    <h3 className="text-white font-bold">Vidnoz</h3>
+                    <p className="text-gray-400 text-sm">Video Creation Platform</p>
+                  </div>
+                </div>
+                <p className="text-gray-400">"Working with The Learn Up was seamless. Their detailed product showcase and clear communication led to excellent results for our platform."</p>
+              </div>
+
+              <div className="group relative bg-gradient-to-br from-[#1A1A1A]/90 to-[#2A2A2A]/90 p-8 rounded-2xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
+                <div className="flex items-center gap-4 mb-6">
+                  <img src="/sponsorship/images/sponsors/HitPaw-Logo.webp" alt="HitPaw" className="w-12 h-12 rounded-full bg-white/10 p-2 brightness-0 invert" />
+                  <div>
+                    <h3 className="text-white font-bold">HitPaw</h3>
+                    <p className="text-gray-400 text-sm">Video Editing Software</p>
+                  </div>
+                </div>
+                <p className="text-gray-400">"The quality of viewers and engagement rate exceeded our expectations. The Learn Up's audience is highly targeted and interested in tech solutions."</p>
               </div>
             </div>
           </div>
@@ -729,7 +942,7 @@ ${partnershipFormData.message}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#06B6D4]/10 via-[#000000]/5 to-transparent blur-3xl"></div>
             <div className="absolute inset-0 bg-gradient-to-b from-[#000000] via-transparent to-[#000000]"></div>
           </div>
-          <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10">
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-white tracking-tight">
               Trusted by <span className="text-[#06B6D4]">Industry Leaders</span>
             </h2>
@@ -739,56 +952,56 @@ ${partnershipFormData.message}
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
               {/* Company logos */}
-              <div className="bg-[#1A1A1A]/80 p-6 rounded-xl backdrop-blur-md border border-[#2A2A2A] flex items-center justify-center min-h-[100px]">
+              <div className="bg-[#1A1A1A]/80 p-6 rounded-xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 flex items-center justify-center min-h-[100px] shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
                 <img 
                   src="/sponsorship/images/sponsors/Fliki-AI-Logo-removebg.png" 
                   alt="Fliki AI" 
                   className="w-44 h-12 object-contain opacity-70"
                 />
               </div>
-              <div className="bg-[#1A1A1A]/80 p-6 rounded-xl backdrop-blur-md border border-[#2A2A2A] flex items-center justify-center min-h-[100px]">
+              <div className="bg-[#1A1A1A]/80 p-6 rounded-xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 flex items-center justify-center min-h-[100px] shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
                 <img 
                   src="/sponsorship/images/sponsors/Vidnoz-Logo.png" 
                   alt="Vidnoz" 
                   className="w-36 h-10 object-contain opacity-70"
                 />
               </div>
-              <div className="bg-[#1A1A1A]/80 p-6 rounded-xl backdrop-blur-md border border-[#2A2A2A] flex items-center justify-center min-h-[100px]">
+              <div className="bg-[#1A1A1A]/80 p-6 rounded-xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 flex items-center justify-center min-h-[100px] shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
                 <img 
                   src="/sponsorship/images/sponsors/HitPaw-Logo.webp" 
                   alt="HitPaw" 
                   className="w-36 h-10 object-contain opacity-70 brightness-0 invert"
                 />
               </div>
-              <div className="bg-[#1A1A1A]/80 p-6 rounded-xl backdrop-blur-md border border-[#2A2A2A] flex items-center justify-center min-h-[100px]">
+              <div className="bg-[#1A1A1A]/80 p-6 rounded-xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 flex items-center justify-center min-h-[100px] shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
                 <img 
                   src="/sponsorship/images/sponsors/Fotor-Logo.webp" 
                   alt="Fotor" 
                   className="w-36 h-10 object-contain opacity-70"
                 />
               </div>
-              <div className="bg-[#1A1A1A]/80 p-6 rounded-xl backdrop-blur-md border border-[#2A2A2A] flex items-center justify-center min-h-[100px]">
+              <div className="bg-[#1A1A1A]/80 p-6 rounded-xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 flex items-center justify-center min-h-[100px] shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
                 <img 
                   src="/sponsorship/images/sponsors/Stylar-AI.png" 
                   alt="Stylar AI" 
                   className="w-36 h-10 object-contain opacity-70"
                 />
               </div>
-              <div className="bg-[#1A1A1A]/80 p-6 rounded-xl backdrop-blur-md border border-[#2A2A2A] flex items-center justify-center min-h-[100px]">
+              <div className="bg-[#1A1A1A]/80 p-6 rounded-xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 flex items-center justify-center min-h-[100px] shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
                 <img 
                   src="/sponsorship/images/sponsors/Innaio-logo.png" 
                   alt="Innaio" 
                   className="w-36 h-10 object-contain opacity-70"
                 />
               </div>
-              <div className="bg-[#1A1A1A]/80 p-6 rounded-xl backdrop-blur-md border border-[#2A2A2A] flex items-center justify-center min-h-[100px]">
+              <div className="bg-[#1A1A1A]/80 p-6 rounded-xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 flex items-center justify-center min-h-[100px] shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
                 <img 
                   src="/sponsorship/images/sponsors/Wps-Office.png" 
                   alt="WPS Office" 
                   className="w-36 h-10 object-contain opacity-70"
                 />
               </div>
-              <div className="bg-[#1A1A1A]/80 p-6 rounded-xl backdrop-blur-md border border-[#2A2A2A] flex items-center justify-center min-h-[100px]">
+              <div className="bg-[#1A1A1A]/80 p-6 rounded-xl backdrop-blur-md border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 flex items-center justify-center min-h-[100px] shadow-xl shadow-[#06B6D4]/20 hover:shadow-[#06B6D4]/40 hover:scale-[1.02]">
                 <img 
                   src="/sponsorship/images/sponsors/Hocos-logo.png" 
                   alt="Hocos" 
@@ -796,7 +1009,7 @@ ${partnershipFormData.message}
                 />
               </div>
             </div>
-          </div>
+                </div>
         </section>
 
         {/* Contact Form */}
@@ -815,8 +1028,8 @@ ${partnershipFormData.message}
                 isSubmitting={isSubmitting}
               />
             </Suspense>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Partnership Form Popup */}
         {showPartnershipForm && (
@@ -860,26 +1073,26 @@ ${partnershipFormData.message}
                 >
                   <Mail className="w-5 h-5 mr-2 group-hover:text-[#06B6D4] transition-colors" />
                   <span>thelearnuponline@gmail.com</span>
-                </a>
-                <a 
-                  href="https://www.youtube.com/@theLearnUp" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+              </a>
+              <a 
+                href="https://www.youtube.com/@theLearnUp" 
+                target="_blank" 
+                rel="noopener noreferrer" 
                   className="flex items-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-105 group"
-                >
+              >
                   <Youtube className="w-5 h-5 mr-2 group-hover:text-[#06B6D4] transition-colors" />
-                  <span>YouTube Channel</span>
-                </a>
-              </div>
+                <span>YouTube Channel</span>
+              </a>
             </div>
+          </div>
             <div className="pt-8 border-t border-[#2A2A2A] text-center">
               <p className="text-gray-500 text-sm">
-              © {new Date().getFullYear()} The Learn Up. All rights reserved.
+            © {new Date().getFullYear()} The Learn Up. All rights reserved.
               </p>
             </div>
           </div>
         </footer>
-      </div>
+        </div>
     </div>
   );
 }
